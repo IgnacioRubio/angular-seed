@@ -1,0 +1,21 @@
+
+<header>
+     <h1>My Shopping List</h1>
+
+</header>
+
+<div ng-repeat="item in $ctrl.items">
+
+    <span>{{item}}</span>
+    <a ng-click="$ctrl.removeItem($index)">
+        <img src="assets/img/cross.png">
+    </a>
+</div>
+
+<div>
+
+    <input type="text" ng-model="item" placeholder="Add shopping items here">
+    <button class="button btn-primary" ng-click="$ctrl.addItem(item)">Add</button>
+    <p>{{$ctrl.errorText}}</p>
+
+</div>
